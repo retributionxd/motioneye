@@ -30,7 +30,7 @@ class setpwm(tornado.web.RequestHandler):
     def get(self):
         
         pwm.ChangeDutyCycle(100)
-        pwmValue = self.get_argument("say")
+        pwmValue = int(self.get_argument("pwm")
         self.write('Setting Pwm value to %s' % `pwmValue`)
 
 
