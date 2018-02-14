@@ -83,7 +83,7 @@
     <div class="header">
         <div class="header-container">
             <div class="settings-top-bar closed">
-                <div class="button icon settings-button mouse-effect" title="settings"></div
+                <div class="button icon settings-button mouse-effect" title="settings" id="preferencesdude"></div
                 ><div class="button icon logout-button mouse-effect" title="switch user"></div>
                 <select class="styled" id="cameraSelect" {% if not add_remove_cameras %}style="display: none;"{% endif %}></select>
                 <div class="button icon rem-camera-button mouse-effect" id="remCameraButton" title="remove camera" {% if not add_remove_cameras %}style="display: none;"{% endif %}></div>
@@ -1173,7 +1173,10 @@
         </div>
     {% endif %}
 <script>
+    $('#preferencesdude').click(function()
+                                {
     $('#lampcontroller').css('display','show');
+    });
     $('#lampslider').change(function() {
         var newValue=this.value;
     if(newValue &&  (newValue>=0 || newValue<=100))
@@ -1185,9 +1188,6 @@
 });
     
       
-        $('.settings-item').show();
-        $('.settings-item').show();
-        $('.settings-item').show();
 </script>
 
 <div class="modal-glass"></div>
