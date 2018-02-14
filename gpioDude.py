@@ -28,7 +28,7 @@ GPIO.cleanup()
 
 class setpwm(tornado.web.RequestHandler):
     def get(self):
-        self.write(')
+        
         pwm.ChangeDutyCycle(100)
         pwmValue = self.get_argument("say")
         self.write('Setting Pwm value to %s' % `pwmValue`)
