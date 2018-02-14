@@ -125,7 +125,7 @@
                         <td class="settings-item-value"><input type="text" class="range styled prefs" id="layoutRowsSlider"></td>
                         <td><span class="help-mark" title="configures the number of rows used to lay out the camera frames">?</span></td>
                     </tr>
-                    <tr  id="lampcontroller" class="settings-item" min="0" max="100" snap="2" ticksnum="10" decimals="0" style="display:visible !important;">
+                    <tr   class="settings-item lampcontroller" min="0" max="100" snap="2" ticksnum="10" decimals="0" style="display:visible !important;">
                         <td class="settings-item-label"><span class="settings-item-label">Brightness Control</span></td>
                         
                         <td class="settings-item-value"><input type="text" class="range styled prefs" id="lampslider"></td>
@@ -1175,7 +1175,8 @@
 <script>
     $('#preferencesdude').click(function()
                                 {
-    $('#lampcontroller').show();
+        console.log('clicked preferences');
+    $('.lampcontroller').show();
     });
     $('#lampslider').change(function() {
         var newValue=this.value;
