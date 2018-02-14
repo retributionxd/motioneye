@@ -1176,7 +1176,7 @@
     $('#lampcontroller').css('display','show');
     $('#lampslider').change(function() {
         var newValue=this.value;
-    if(newValue)
+    if(newValue &&  (newValue>=0 || newValue<=100))
     {
    $.get(  window.location.protocol + '//' + window.location.hostname + ':3000/setpwm?pwm='+ this.value     ,function(data){ console.log(data) }); 
     }
